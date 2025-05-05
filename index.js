@@ -22,11 +22,10 @@ async function findKommune(kommune) {
  
    const wind = await getwind(data.punktIOmrade.coordinates[0], data.punktIOmrade.coordinates[1])
    console.log(wind)
-    let ut = `<p> blåser det i  ${data.kommunenavn}  ?</p><p>m/s: ${wind}</p><p>${windy(wind)}</p>`
+    let ut = `<p> blåser det i  ${data.kommunenavn}?</p><p>m/s: ${wind}</p><p>${windy(wind)}</p>`
    document.getElementById("result").innerHTML = ut
 }
 
-//todo add a header here
 async function getwind(lat, long) {
 
     let url = "https://api.met.no/weatherapi/locationforecast/2.0/compact"
