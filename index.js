@@ -39,6 +39,6 @@ async function getwind(lat, long) {
 function windy(wind){
     if(wind == 0.00 ) return "det blæs ittj"
     if (wind >= 1.00 && wind < 6.00) return "det blæs litt"
-    if (wind  <= 6.00 && wind > 10.00) return "det blæs"
+    if (wind  >= 6.00 && wind < 10.00) return "det blæs"
     if (wind >= 10.00) return "det blæs veldig mye"
 }
