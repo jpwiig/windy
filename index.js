@@ -27,12 +27,17 @@ async function findKommune(kommune) {
 }
 
 async function getwind(lat, long) {
-
+    const today = new Date().getTime();
+    console.log(today)
     let url = "https://api.met.no/weatherapi/locationforecast/2.0/compact"
     const data = await fetch(url + `?lat=${lat}&lon=${long}`,).then(response =>
         response.json()
     ).then(data => {
-        return data.properties.timeseries[0].data.instant.details.wind_speed
+        return data.properties.timeseries.sort((a,b) =>{
+            const diffA = new Date(a.time).getTime() - today
+            const diffB = new Date(b.time).getTime() - today
+            return diffA - diffB
+        })[0].data.instant.details.wind_speed
     })
     return data
 }
