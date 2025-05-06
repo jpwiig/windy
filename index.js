@@ -33,13 +33,19 @@ async function getwind(lat, long) {
     const data = await fetch(url + `?lat=${lat}&lon=${long}`,).then(response =>
         response.json()
     ).then(data => {
-        return data.properties.timeseries.sort((a,b) =>{
-            const diffA = new Date(a.time).getTime() - today
-            const diffB = new Date(b.time).getTime() - today
-            return diffA - diffB
-        })[0].data.instant.details.wind_speed
+        let moreSorted = []
+        let sorteddata=data.properties.timeseries.sort((a,b) =>{
+            return new Date(b.time) - new Date(a.time)
+        })
+       sorteddata.forEach(element => {
+        if(new Date() <= new Date(element.time))
+            moreSorted.push(element)
+        })
+        console.log(moreSorted)
+        return moreSorted[moreSorted.length -1]
     })
-    return data
+    console.log(data)
+    return data.data.instant.details.wind_speed
 }
 function windy(wind){
     if(wind == 0.00 ) return "det blæs ittj"
