@@ -39,7 +39,7 @@ async function getwind(lat, long) {
         if(new Date() <= new Date(element.time))
             moreSorted.push(element)
         })
-        console.log(moreSorted)
+        //console.log(moreSorted)
         return moreSorted[moreSorted.length -3]
     })
     return data.data.instant.details.wind_speed
