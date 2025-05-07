@@ -28,7 +28,7 @@ async function findKommune(kommune) {
 
 async function getwind(lat, long) {
     let today = new Date().getTime();
-    console.log(today)
+
     let url = "https://api.met.no/weatherapi/locationforecast/2.0/compact"
     const data = await fetch(url + `?lat=${lat}&lon=${long}`,).then(response =>
         response.json()
@@ -44,7 +44,6 @@ async function getwind(lat, long) {
         console.log(moreSorted)
         return moreSorted[moreSorted.length -3]
     })
-    console.log(data)
     return data.data.instant.details.wind_speed
 }
 function windy(wind){
