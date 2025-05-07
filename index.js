@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("btn-submit").addEventListener('click', event => {
         event.preventDefault()
         kommune = document.getElementById("kommune").value
-        console.log(kommune)
 
         findKommune(kommune)
     })
@@ -21,7 +20,6 @@ async function findKommune(kommune) {
    
  
    const wind = await getwind(data.punktIOmrade.coordinates[0], data.punktIOmrade.coordinates[1])
-   console.log(wind)
     let ut = `<p> blåser det i  ${data.kommunenavn}?</p><p>m/s: ${wind}</p><p>${windy(wind)}</p>`
    document.getElementById("result").innerHTML = ut
 }
