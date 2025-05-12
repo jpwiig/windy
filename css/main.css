@@ -1,0 +1,91 @@
+/* Custom styles that override or extend Bootstrap */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    background-color: white;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+form input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+}
+.btn {
+    width: 100%;
+    max-width: 250px;
+}
+.btn-close {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+}
+.btn-close:hover {
+    background-color: #eee;
+}
+#result {
+    position: relative;
+    margin: 40px 40px 0;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 25px 15px;
+        margin: 0 1rem;
+    }
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+    form input[type="text"] {
+        margin-bottom: 12px;
+    }
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    .btn-close {
+        top: 23px;
+        right: 5px;
+        height: 30px;
+        width: 30px;
+    }
+}

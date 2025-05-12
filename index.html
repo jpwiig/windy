@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blæs</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <meta name="description" content="Is there windy or not?">
-  <script src="index.js"></script>
-</head>
-<body>
-  <h1>Blåser det mye eller lite i byen du er i</h1>
-<form>
-<label for="kommune">kommunenavn: </label>
-<input id="kommune" type="text">
-  <input type="submit" class="btn btn-info" id="btn-submit" value="sjekk om det blæs">
-</form>
-<div id="result">
-<p>
-  utviklet med <a href="https://developer.yr.no/" target="_blank">yr api</a> og <a href="https://ws.geonorge.no/kommuneinfo/v1/#/default/get_sok" target="_blank">kartverket api</a>
-</p>
-<p><a href="https://jpwiig.dev/">jpwiig.dev</a> <a href="https://github.com/jpwiig/windy">github kodebrønn</a></p>
-</div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blæs</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <meta name="description" content="Is there windy or not?" />
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Blåser det mye eller lite i byen du er i</h1>
+            <form>
+                <label for="kommune">kommunenavn: </label>
+                <input id="kommune" type="text" />
+                <input
+                    type="submit"
+                    class="btn btn-info"
+                    id="btn-submit"
+                    value="sjekk om det blæs"
+                />
+            </form>
+            <div id="result">
+                <p>
+                    utviklet med
+                    <a href="https://developer.yr.no/" target="_blank"
+                        >yr api</a
+                    >
+                    og
+                    <a
+                        href="https://ws.geonorge.no/kommuneinfo/v1/#/default/get_sok"
+                        target="_blank"
+                        >kartverket api</a
+                    >
+                </p>
+                <p>
+                    <a href="https://jpwiig.dev/">jpwiig.dev</a> -
+                    <a href="https://github.com/jpwiig/windy"
+                        >github kodebrønn</a
+                    >
+                </p>
+            </div>
+        </div>
+    </body>
 </html>
